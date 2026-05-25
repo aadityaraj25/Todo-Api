@@ -7,4 +7,3 @@ route.get("/",(req,res)=>{
 })
 
 export default route;
-//because the route is exported using default it can be imported using any name

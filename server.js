@@ -11,14 +11,7 @@ app.use(express.json());
 
 
 // Routes
-app.use("/",todoroute)
-//if we use the app.use("app") -- and in the router section router.get("/home") :: then we have to open /app/home in localhost
-
-
-// //Testing Purpose --> routes are now created in routes folder
-// app.get("/",(req,res)=>{
-//     res.send("Todo API is running")
-// })
+app.use("/api",todoroute)
 
 //Server start point
 app.listen(PORT,(req,res)=>{
