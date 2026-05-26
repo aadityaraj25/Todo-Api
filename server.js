@@ -1,18 +1,19 @@
 import express from 'express';
 import cors from 'cors';
-import todoroute from '../Todo-App/routes/routes.todo.js'
 import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
-dotenv.config() 
-const PORT = process.env.PORT
+import todoroute from './routes/routes.todo.js'
+import {connectDB} from './config/db.js'
 
+const PORT = process.env.PORT
 const app = express();
 
 //Middleware
+dotenv.config() 
 app.use(cors());
 app.use(express.json());
-connectDB();
 
+//Connect to database
+connectDB()
 
 // Routes
 app.use("/api",todoroute)
