@@ -8,6 +8,6 @@ export const connectDB = async() =>{
     catch(error){
         console.log("Error Occured !")
         console.error(error.message)
-        print.exit(1)
+        process.exit(1)
     }
 }

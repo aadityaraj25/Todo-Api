@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import todoroute from './routes/routes.todo.js'
 import {connectDB} from './config/db.js'
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT||3002
 const app = express();
 
 //Middleware
