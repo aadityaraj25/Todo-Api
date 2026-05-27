@@ -16,9 +16,9 @@ app.use(express.json());
 connectDB()
 
 // Routes
-app.use("/api",todoroute)
+app.use("/api/todos",todoroute)
 
 //Server start point
-app.listen(PORT,(req,res)=>{
+app.listen(PORT,(req,res)=>{//
     console.log(`Your API is running on ${PORT}`)
 })
