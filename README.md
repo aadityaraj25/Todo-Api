@@ -43,7 +43,7 @@ All routes are mounted under the `/api/todos` base path (so the full paths below
 
 - Create a todo
 	- Method: POST
-	- Path: `/api/add`
+	- Path: `/api/todos/add`
 	- Body (JSON) - required fields:
 	- `title` (string, required) — todo title
 	- `description` (string, optional) — todo details
@@ -51,7 +51,7 @@ All routes are mounted under the `/api/todos` base path (so the full paths below
 
 - Get list of todos
 	- Method: GET
-	- Path: `/api/`
+	- Path: `/api/todos`
 	- Query parameters (optional):
 	- `search` (string) — case-insensitive title search
 	- `sort` (`asc` or `desc`) — sort by creation date (default desc)
@@ -61,14 +61,14 @@ All routes are mounted under the `/api/todos` base path (so the full paths below
 
 - Get a todo by id
 	- Method: GET
-	- Path: `/api/:id`
+	- Path: `/api/todos/:id`
 	- Path params:
 	- `id` (MongoDB ObjectId string, required)
 	- Success: 200 OK with todo object
 
 - Update a todo
 	- Method: PUT
-	- Path: `/api/:id`
+	- Path: `/api/todos/:id`
 	- Path params:
 	- `id` (MongoDB ObjectId string, required)
 	- Body (JSON):
@@ -78,14 +78,14 @@ All routes are mounted under the `/api/todos` base path (so the full paths below
 
 - Toggle todo completion
 	- Method: PATCH
-	- Path: `/api/:id/toggle`
+	- Path: `/api/todos/:id/toggle`
 	- Path params:
 	- `id` (MongoDB ObjectId string, required)
 	- Success: 200 OK with updated todo object
 
 - Delete a todo
 	- Method: DELETE
-	- Path: `/api/:id`
+	- Path: `/api/todos/:id`
 	- Path params:
 	- `id` (MongoDB ObjectId string, required)
 	- Success: 200 OK with deleted todo object
