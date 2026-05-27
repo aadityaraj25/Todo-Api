@@ -9,12 +9,7 @@ A minimal RESTful Todo API built with Express and Mongoose.
 - A MongoDB connection string (MongoDB Atlas or local)
 
 ## Setup
-1. Copy `.env.example` to `.env` (or create a `.env`) and set the variables:
-
-MONGO_URI should include the database name. Example:
-
-MONGO_URI = mongodb+srv://<username>:<password>@cluster0.xyz.mongodb.net/todo
-PORT = 3001
+1. Create a `.env` and set the variables `MONGO_URI` and `PORT`
 
 2. Install dependencies:
 
